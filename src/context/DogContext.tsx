@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, ReactNode } from 'react';
-import { DogBreed, DogFact } from '../types';
+import { DogBreed } from '../types';
 import { fetchDogBreeds, fetchBreedImage } from '../services/dogApi';
 
 interface DogContextType {
@@ -8,7 +8,6 @@ interface DogContextType {
   error: string | null;
   selectedBreeds: [DogBreed | null, DogBreed | null];
   breedImages: [string | null, string | null];
-  facts: DogFact[];
   setSelectedBreed: (index: 0 | 1, breed: DogBreed | null) => void;
   loadBreedImage: (index: 0 | 1, breedId: number) => Promise<void>;
   fetchBreeds: () => Promise<void>;
@@ -23,7 +22,6 @@ export function DogProvider({ children }: { children: ReactNode }) {
   const [error, setError] = useState<string | null>(null);
   const [selectedBreeds, setSelectedBreeds] = useState<[DogBreed | null, DogBreed | null]>([null, null]);
   const [breedImages, setBreedImages] = useState<[string | null, string | null]>([null, null]);
-  const [facts, setFacts] = useState<DogFact[]>([]);
 
   const fetchBreeds = async () => {
     // Skip if already loading
@@ -93,7 +91,6 @@ export function DogProvider({ children }: { children: ReactNode }) {
         error,
         selectedBreeds,
         breedImages,
-        facts,
         setSelectedBreed,
         loadBreedImage,
         fetchBreeds,
