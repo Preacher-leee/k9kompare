@@ -8,7 +8,6 @@ import Layout from './components/layout/Layout';
 // Pages
 import Home from './pages/Home';
 import Compare from './pages/Compare';
-import Facts from './pages/Facts';
 import Newsletter from './pages/Newsletter';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
@@ -47,7 +46,6 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/compare" element={<Compare />} />
-            <Route path="/facts" element={<Facts />} />
             <Route path="/newsletter" element={<Newsletter />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
