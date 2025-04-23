@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Info, PawPrint, RefreshCw } from 'lucide-react';
 import { useDog } from '../context/DogContext';
-import { fetchDogFacts, fetchKinduffDogFacts } from '../services/dogApi';
 import { DogFact } from '../types';
 
 const Compare = () => {
@@ -32,7 +31,6 @@ const Compare = () => {
     try {
       // Get 2 facts from each API
       const dukeFactsPromise = fetchDogFacts(2);
-      const kinduffFactsPromise = fetchKinduffDogFacts(2);
       
       const [dukeFacts, kinduffFacts] = await Promise.all([dukeFactsPromise, kinduffFactsPromise]);
       setDogFacts([...dukeFacts, ...kinduffFacts]);
@@ -122,21 +120,6 @@ const Compare = () => {
                 {breed.origin && (
                   <p className="text-sm"><span className="font-medium">Origin:</span> {breed.origin}</p>
                 )}
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold flex items-center gap-2">
-                <PawPrint size={18} className="text-secondary-500" />
-                Fun Facts
-              </h3>
-              <div className="mt-2 space-y-3">
-                <p className="text-sm italic bg-gray-50 p-3 rounded-md">
-                  {getFact(index * 2)}
-                </p>
-                <p className="text-sm italic bg-gray-50 p-3 rounded-md">
-                  {getFact(index * 2 + 1)}
-                </p>
               </div>
             </div>
           </div>
