@@ -88,22 +88,6 @@ export const fetchBreedImage = async (breedId: number): Promise<string> => {
   }
 };
 
-// Fetch random dog facts from Duke's API
-export const fetchDogFacts = async (count: number = 5): Promise<DogFact[]> => {
-  try {
-    const response = await axios.get(DOG_FACTS_API_URL);
-    // Take only requested number of facts and add source
-    return response.data.slice(0, count).map((fact: string, index: number) => ({
-      id: index,
-      fact,
-      source: 'Duke Dog Facts API',
-    }));
-  } catch (error) {
-    console.error('Error fetching dog facts:', error);
-    throw error;
-  }
-};
-
 // Fetch random dog facts from Kinduff's API
 export const fetchKinduffDogFacts = async (count: number = 5): Promise<DogFact[]> => {
   try {
