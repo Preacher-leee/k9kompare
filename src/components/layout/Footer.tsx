@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <img src={Logo} alt="K9Kompare Logo" className="h-12 w-auto mb-4" />
+            <img src="https://i.ibb.co/R4v97C2y/logo.png" alt="K9Kompare Logo" className="h-12 w-auto mb-4" />
             <p className="text-sm text-gray-300 mb-4">
               Making dog breed research fun and engaging
             </p>
