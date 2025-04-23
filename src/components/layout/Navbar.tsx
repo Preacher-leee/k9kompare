@@ -30,7 +30,6 @@ const Navbar = () => {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/compare', label: 'Compare Breeds' },
-    { to: '/facts', label: 'Fun Dog Facts' },
     { to: '/newsletter', label: 'Newsletter' },
     { to: '/about', label: 'About' },
   ];
