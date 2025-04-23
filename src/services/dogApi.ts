@@ -3,8 +3,6 @@ import { DogBreed, DogFact } from '../types';
 
 // API URLs
 const DOG_API_URL = 'https://api.thedogapi.com/v1';
-const DOG_FACTS_API_URL = 'https://dukengn.github.io/Dog-facts-API/api/facts';
-const KINDUFF_DOG_API_URL = 'https://kinduff.github.io/dog-api/api/facts';
 const DOG_CEO_API_URL = 'https://dog.ceo/api';
 const HTTP_DOG_API_URL = 'https://http.dog';
 
@@ -34,51 +32,12 @@ export const fetchDogFacts = async (count: number = 5): Promise<DogFact[]> => {
   }));
 };
 
-// Fetch dog facts from Kinduff's API with delays
-export const fetchKinduffDogFacts = async (count: number = 5): Promise<DogFact[]> => {
-  const facts: DogFact[] = [];
-
-  for (let i = 0; i < count; i++) {
-    try {
-      await delay(500); // avoid rate limits
-      const response = await axios.get(KINDUFF_DOG_API_URL);
-      if (response.data?.facts?.length) {
-        facts.push({
-          id: i,
-          fact: response.data.facts[0],
-          source: 'Kinduff Dog API',
-        });
-      }
-    } catch (error) {
-      console.warn(`Kinduff fact #${i + 1} failed`, error.message);
-    }
-  }
-
-  return facts;
-};
-
 // Local fallback if both APIs fail
 const fallbackDogFacts: DogFact[] = [
   { id: 0, fact: 'Dogs have three eyelids.', source: 'Local Fallback' },
   { id: 1, fact: 'Dalmatians are born completely white.', source: 'Local Fallback' },
   { id: 2, fact: 'Dogs can learn over 1000 words.', source: 'Local Fallback' },
 ];
-
-// Smart dog fact fetcher with fallback logic
-export const fetchSmartDogFacts = async (count: number = 5): Promise<DogFact[]> => {
-  try {
-    return await fetchDogFacts(count);
-  } catch {
-    console.warn('Duke API failed, trying Kinduff...');
-    try {
-      const kinduffFacts = await fetchKinduffDogFacts(count);
-      return kinduffFacts.length ? kinduffFacts : fallbackDogFacts.slice(0, count);
-    } catch {
-      console.warn('Kinduff API also failed. Using fallback facts.');
-      return fallbackDogFacts.slice(0, count);
-    }
-  }
-};
 
 // Everything else (unchanged)...
 export const fetchDogBreeds = async (): Promise<DogBreed[]> => {
