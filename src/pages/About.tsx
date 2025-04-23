@@ -38,7 +38,7 @@ const About = () => {
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">About K9Kompare</h1>
+          <h1 className="text-4xl font-bold mb-4">About K9 Kompare</h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our mission is to make dog breed research fun, engaging, and accessible to everyone.
           </p>
@@ -49,13 +49,13 @@ const About = () => {
             <h2 className="text-2xl font-bold mb-6">Our Story</h2>
             <div className="prose prose-lg max-w-none">
               <p>
-                K9Kompare was born out of a simple idea: make it easier for prospective dog owners to find their perfect canine companion. We believe that the right match between human and dog creates a lifetime of happiness for both.
+                K9 Kompare was born out of a simple idea: make it easier for prospective dog owners to find their perfect canine companion. We believe that the right match between human and dog creates a lifetime of happiness for both.
               </p>
               <p className="mt-4">
-                Founded by a team of dog enthusiasts and animal welfare advocates, K9Kompare combines technology with a passion for dogs to create a platform that helps people make informed decisions about dog ownership.
+                Founded by a team of dog enthusiasts and animal welfare advocates, K9 Kompare combines technology with a passion for dogs to create a platform that helps people make informed decisions about dog ownership.
               </p>
               <p className="mt-4">
-                We've all been there – scrolling through endless websites trying to compare different dog breeds, wondering which one would be the best fit for our lifestyle. K9Kompare streamlines this process, putting all the information you need in one place with a side-by-side comparison tool.
+                We've all been there – scrolling through endless websites trying to compare different dog breeds, wondering which one would be the best fit for our lifestyle. K9 Kompare streamlines this process, putting all the information you need in one place with a side-by-side comparison tool.
               </p>
               <p className="mt-4">
                 But we're more than just a comparison tool. We're a community of dog lovers dedicated to promoting responsible dog ownership and celebrating the joy that dogs bring to our lives.
@@ -95,7 +95,7 @@ const About = () => {
             <h2 className="text-2xl font-bold mb-6">Our Team</h2>
             <div className="prose prose-lg max-w-none">
               <p>
-                Behind K9Kompare is a dedicated team of dog lovers, tech enthusiasts, and animal welfare advocates. Our diverse team brings together expertise in:
+                Behind K9 Kompare is a dedicated team of dog lovers, tech enthusiasts, and animal welfare advocates. Our diverse team brings together expertise in:
               </p>
               <ul className="mt-4">
                 <li>Canine behavior and training</li>
@@ -123,7 +123,7 @@ const About = () => {
                   <PawPrint size={20} />
                   Join Our Newsletter
                 </Link>
-                <a href="mailto:contact@k9kompare.com" className="btn bg-secondary-500 text-white hover:bg-secondary-600 flex items-center justify-center gap-2">
+                <a href="mailto:contact@K9 Kompare.com" className="btn bg-secondary-500 text-white hover:bg-secondary-600 flex items-center justify-center gap-2">
                   <MessageCircle size={20} />
                   Email Us
                 </a>
