@@ -9,11 +9,10 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <Logo className="h-12 w-auto mb-4" isWhite />
+            <img src={Logo} alt="K9Kompare Logo" className="h-12 w-auto mb-4" />
             <p className="text-sm text-gray-300 mb-4">
               Making dog breed research fun and engaging
             </p>
-            </div>
           </div>
 
           <div>
@@ -43,7 +42,7 @@ const Footer = () => {
             </p>
             <Link to="/newsletter" className="btn btn-secondary inline-block">Subscribe Now</Link>
           </div>
-        </div>
+        </div> {/* <-- correctly closed the grid */}
 
         <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-gray-400">
           <div className="flex flex-col md:flex-row justify-between items-center">
