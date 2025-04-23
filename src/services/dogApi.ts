@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { DogBreed, DogFact } from '../types';
+import { DogBreed } from '../types';
 
 // API URLs
 const DOG_API_URL = 'https://api.thedogapi.com/v1';
@@ -20,17 +20,6 @@ const dogApiClient = axios.create({
 // Utility delay
 const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
-// Fetch dog facts from Duke's API (GitHub hosted JSON)
-export const fetchDogFacts = async (count: number = 5): Promise<DogFact[]> => {
-  const response = await axios.get(DOG_FACTS_API_URL, { responseType: 'json' });
-  if (!Array.isArray(response.data)) throw new Error('Invalid dog facts data structure');
-
-  return response.data.slice(0, count).map((fact: string, index: number) => ({
-    id: index,
-    fact,
-    source: 'Duke Dog Facts API',
-  }));
-};
 
 // Local fallback if both APIs fail
 const fallbackDogFacts: DogFact[] = [
