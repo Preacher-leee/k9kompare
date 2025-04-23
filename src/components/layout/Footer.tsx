@@ -13,7 +13,6 @@ const Footer = () => {
             <p className="text-sm text-gray-300 mb-4">
               Making dog breed research fun and engaging
             </p>
-              </a>
             </div>
           </div>
 
@@ -30,10 +29,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-2">
-              <li><a href="tips" className="text-gray-300 hover:text-white transition-colors">Dog Care Tips</a></li>
-              <li><a href="health" className="text-gray-300 hover:text-white transition-colors">Breed Health</a></li>
-              <li><a href="train" className="text-gray-300 hover:text-white transition-colors">Training Resources</a></li>
-              <li><a href="adopt" className="text-gray-300 hover:text-white transition-colors">Adoption Info</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Dog Care Tips</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Breed Health</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Training Resources</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Adoption Info</a></li>
             </ul>
           </div>
 
